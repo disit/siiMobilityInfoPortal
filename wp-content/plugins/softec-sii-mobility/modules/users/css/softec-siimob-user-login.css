@@ -1,0 +1,29 @@
+@import url("softec-siimob-user.css");
+
+.login-button-container {
+    width: 50%;
+    margin: 10px auto;
+    float: right;
+}
+
+#user-login-submit {
+    width: 100%;
+}
+
+#user-message-box ul{
+    margin: 0;
+    text-align: left;
+    font-weight: 600;
+    margin-left: 1.5em;
+}
+
+.password-registration {
+    float: left;
+    margin: 10px auto;
+    width: 50%;
+    font-size: 13px;
+}
+
+#custom-login-form label {
+    margin-top: 15px;
+}

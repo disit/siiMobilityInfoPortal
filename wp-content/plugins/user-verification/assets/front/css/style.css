@@ -1,0 +1,35 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+.user-verification{}
+.user-verification {
+    background: #eeeeee none repeat scroll 0 0;
+    padding: 20px;
+}
+
+.user-verification .wrong-key {
+    color: #ff6060;
+}
+.user-verification .expired {
+    color: #238bf9;
+}
+
+.user-verification .verified {
+    color: #19ad0c;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

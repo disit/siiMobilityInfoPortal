@@ -1,0 +1,66 @@
+@import url("softec-siimob-user.css");
+
+#user-registration-reset,
+#user-registration-next, 
+#user-registration-prev {
+    width: 49%;
+    margin-top: 10px;
+}
+
+#user-registration-reset,
+#user-registration-prev {
+    float: left;
+}
+
+#user-registration-next {
+    float: right;
+}
+
+.button-container {
+    text-align: center;
+}
+
+#user-registration-submit {
+    width: 49%;
+    float: right;
+    margin-top: 10px;
+}
+
+#username.success,
+#email.success {
+    border: solid 3px #4BB543;
+}
+
+#username.error,
+#email.error,
+#password_confirm.error {
+    border: solid 3px #ff0000;
+}
+
+.username-success-message,
+.username-error-message,
+.email-success-message,
+.email-error-message,
+.password-error-message {
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.username-error-message,
+.email-error-message,
+.password-error-message {
+    color: #ff0000;
+}
+
+.username-success-message,
+.email-success-message{
+    color: #4BB543;
+}
+
+#password_confirm {
+    margin-bottom: 10px;
+}
+
+#custom-registration-form label {
+    margin-top: 15px;
+}

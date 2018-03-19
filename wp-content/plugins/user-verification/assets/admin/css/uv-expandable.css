@@ -1,0 +1,49 @@
+/*
+Admin css
+*/
+
+.uv-expandable{}
+.uv-expandable .items{}
+.uv-expandable .items {
+	background: none repeat scroll 0 0 rgb(255, 255, 255);
+	border-bottom: 1px solid rgb(153, 153, 153);
+	margin: 2px 0;
+}
+.uv-expandable  .header {
+	background: #a7e1ff none repeat scroll 0 0;
+	padding: 10px;
+}
+
+.uv-expandable .header .move {
+	padding: 10px;
+	cursor: move;
+}
+
+.uv-expandable .header .expand-collapse{padding: 10px;cursor: pointer;}
+.uv-expandable .header .expand-collapse .fa-expand{ display:inline-block;}
+.uv-expandable .header .expand-collapse .fa-compress{ display:none;}
+.uv-expandable .header .items.active .expand-collapse .fa-expand{ display:none;}
+.uv-expandable .header .items.active .expand-collapse .fa-collapse{ display:inline-block;}
+
+
+
+
+.uv-expandable .active .options {
+  
+	display: block;
+
+}
+.uv-expandable .options {
+	background: none repeat scroll 0 0 rgb(240, 240, 240);
+	display: none;
+	padding: 10px;
+}
+
+
+
+
+
+
+
+
+

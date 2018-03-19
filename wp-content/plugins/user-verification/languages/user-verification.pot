@@ -1,0 +1,303 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: User Verification\n"
+"POT-Creation-Date: 2018-01-17 10:37+0600\n"
+"PO-Revision-Date: 2018-01-16 23:50+0600\n"
+"Last-Translator: \n"
+"Language-Team: pickplugins <support@pickplugins.com>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.5\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SearchPath-0: templates\n"
+"X-Poedit-SearchPath-1: includes\n"
+"X-Poedit-SearchPath-2: templates\n"
+
+#: includes/classes/class-emails.php:62
+msgid "New User Registered"
+msgstr ""
+
+#: includes/classes/class-emails.php:63
+msgid "Notification email for admin when a new user is registered."
+msgstr ""
+
+#: includes/classes/class-emails.php:64
+msgid "New User Submitted - {site_url}"
+msgstr ""
+
+#: includes/classes/class-emails.php:71
+msgid "New User Confirmed"
+msgstr ""
+
+#: includes/classes/class-emails.php:72
+msgid "Notification email for confirming a new User."
+msgstr ""
+
+#: includes/classes/class-emails.php:73
+msgid "New User Confirmed - {site_url}"
+msgstr ""
+
+#: includes/classes/class-emails.php:98
+msgid "Site Parameters"
+msgstr ""
+
+#: includes/classes/class-emails.php:103
+msgid "Users Parameters"
+msgstr ""
+
+#: includes/classes/class-settings.php:20
+msgid "User Verification"
+msgstr ""
+
+#: includes/classes/class-settings.php:22
+msgid "Email Templates"
+msgstr ""
+
+#: includes/classes/uv-class-column-users.php:26
+msgid "Verification Status"
+msgstr ""
+
+#: includes/classes/uv-class-column-users.php:43 includes/functions.php:94
+msgid "Approved"
+msgstr ""
+
+#: includes/classes/uv-class-column-users.php:43 includes/functions.php:94
+msgid "Pending approval"
+msgstr ""
+
+#: includes/classes/uv-class-column-users.php:51
+msgid "Approve now"
+msgstr ""
+
+#: includes/classes/uv-class-column-users.php:56
+msgid "Remove Approval"
+msgstr ""
+
+#: includes/functions.php:15
+msgid "Approve"
+msgstr ""
+
+#: includes/functions.php:16
+msgid "Disapprove"
+msgstr ""
+
+#: includes/functions.php:260
+msgid "Blocked Domains"
+msgstr ""
+
+#: includes/functions.php:261
+msgid "One domain per line. wihtout http:// or https://"
+msgstr ""
+
+#: includes/functions.php:274
+msgid "Blocked Usernames"
+msgstr ""
+
+#: includes/functions.php:275
+msgid "Press Plus button to add new option"
+msgstr ""
+
+#: includes/functions.php:348
+msgid "None"
+msgstr ""
+
+#: includes/functions.php:371 includes/functions.php:625
+msgid "Invalid activation Key"
+msgstr ""
+
+#: includes/functions.php:375
+msgid "Your key is expired"
+msgstr ""
+
+#: includes/functions.php:379 includes/functions.php:636
+#: includes/functions.php:647
+msgid "Your account is now verified"
+msgstr ""
+
+#: includes/functions.php:383
+msgid "Activation email sent, Please check latest item on email inbox"
+msgstr ""
+
+#: includes/functions.php:523
+msgid "Verify your email first!"
+msgstr ""
+
+#: includes/functions.php:529
+msgid "Error:"
+msgstr ""
+
+#: includes/functions.php:532
+msgid "Resend verification email"
+msgstr ""
+
+#: includes/functions.php:614
+msgid "Activation Email Sent"
+msgstr ""
+
+#: includes/menus/email-templates.php:110
+msgid "Enable ?"
+msgstr ""
+
+#: includes/menus/email-templates.php:115
+#: includes/menus/email-templates.php:118 includes/menus/settings.php:51
+#: includes/menus/settings.php:69 includes/menus/settings.php:80
+msgid "Yes"
+msgstr ""
+
+#: includes/menus/email-templates.php:123
+#: includes/menus/email-templates.php:126 includes/menus/settings.php:52
+#: includes/menus/settings.php:68 includes/menus/settings.php:79
+msgid "No"
+msgstr ""
+
+#: includes/menus/email-templates.php:133
+msgid "Email To: (Copy)"
+msgstr ""
+
+#: includes/menus/email-templates.php:138
+msgid "Email from name:"
+msgstr ""
+
+#: includes/menus/email-templates.php:142
+msgid "Email from:"
+msgstr ""
+
+#: includes/menus/email-templates.php:151
+msgid "Email Subject:"
+msgstr ""
+
+#: includes/menus/email-templates.php:160
+msgid "Email Body:"
+msgstr ""
+
+#: includes/menus/email-templates.php:192 includes/menus/settings.php:319
+msgid "Changes Saved."
+msgstr ""
+
+#: includes/menus/email-templates.php:198
+msgid " - Emails Templates"
+msgstr ""
+
+#: includes/menus/email-templates.php:204 includes/menus/settings.php:340
+msgid "Save Changes"
+msgstr ""
+
+#: includes/menus/email-templates.php:205
+msgid "Reset"
+msgstr ""
+
+#: includes/menus/settings.php:27
+msgid "verification page?"
+msgstr ""
+
+#: includes/menus/settings.php:28
+msgid ""
+"Verification checker page where you place the shortcode "
+"<code>[user_verification_check]</code>, please create a page and use this "
+"shortcode uder post content."
+msgstr ""
+
+#: includes/menus/settings.php:36
+msgid "Redirect after verification?"
+msgstr ""
+
+#: includes/menus/settings.php:37
+msgid "Redirect page after successfully verified account."
+msgstr ""
+
+#: includes/menus/settings.php:47
+msgid "Automatically login after verification?"
+msgstr ""
+
+#: includes/menus/settings.php:48
+msgid ""
+"Yes means, users click on the Account activation link from email and they "
+"login automaticcaly to your website, No means they don't"
+msgstr ""
+
+#: includes/menus/settings.php:57
+msgid "Options"
+msgstr ""
+
+#: includes/menus/settings.php:64
+msgid "Enable domain block"
+msgstr ""
+
+#: includes/menus/settings.php:65
+msgid "Enable domain blocking."
+msgstr ""
+
+#: includes/menus/settings.php:75
+msgid "Enable username block"
+msgstr ""
+
+#: includes/menus/settings.php:76
+msgid "Enable username blocking."
+msgstr ""
+
+#: includes/menus/settings.php:85
+msgid "Security"
+msgstr ""
+
+#: includes/menus/settings.php:93
+msgid "Invalid activation key"
+msgstr ""
+
+#: includes/menus/settings.php:94
+msgid "Show custom message when user activation key is invalid or wrong"
+msgstr ""
+
+#: includes/menus/settings.php:98
+msgid "Activation key send"
+msgstr ""
+
+#: includes/menus/settings.php:99
+msgid "Show custom message when activation key is sent on user email"
+msgstr ""
+
+#: includes/menus/settings.php:103
+msgid "Verify email address"
+msgstr ""
+
+#: includes/menus/settings.php:104
+msgid ""
+"Show custom message when user an user try to login without verifying his/her "
+"email with proper activation key"
+msgstr ""
+
+#: includes/menus/settings.php:110
+msgid "Registration success message"
+msgstr ""
+
+#: includes/menus/settings.php:111
+msgid "User will get this message as soon as registered on your website"
+msgstr ""
+
+#: includes/menus/settings.php:116
+msgid "Verification successfull"
+msgstr ""
+
+#: includes/menus/settings.php:117
+msgid "Show custom message when user successfully verified"
+msgstr ""
+
+#: includes/menus/settings.php:121
+msgid "Activation key Expired"
+msgstr ""
+
+#: includes/menus/settings.php:122
+msgid "Show custom message when user activation key is expired"
+msgstr ""
+
+#: includes/menus/settings.php:127
+msgid "Messages"
+msgstr ""
+
+#: includes/menus/settings.php:331
+msgid " Settings"
+msgstr ""

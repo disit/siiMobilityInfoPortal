@@ -1,0 +1,151 @@
+@import url("softec-siimob-user.css");
+
+#user_province,
+#user_type {
+    width: 100%;
+}
+
+#user-profile-submit {
+    width: 100%;
+}
+
+#email.success {
+    border: solid 3px #4BB543;
+}
+
+#email.error {
+    border: solid 3px #ff0000;
+}
+
+.email-success-message,
+.email-error-message {
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.email-error-message {
+    color: #ff0000;
+}
+
+.email-success-message{
+    color: #4BB543;
+}
+
+.left-side {
+    width: 47%;
+    float: left;
+}
+
+.right-side {
+    width: 47%;
+    float: right;
+}
+
+.center-side {
+    border-left: 2px solid #000;
+    height: 300px;
+    position: relative;
+    top: -45px;
+    float: left;
+    margin-left: 3%;
+}
+
+input[type="text"]:disabled {
+    background: #dddddd;
+}
+
+.profile-image-content {
+    display: table;
+}
+
+.profile-image-content img{
+    max-width: 400px;
+    width: 100%;
+}
+
+.dashboard-title {
+    /*width: 50%;
+    float: left;*/
+}
+
+#user-dashboard {
+    margin-bottom: 40px;
+}
+
+.dashboard-view-link {
+    /*float: left;
+    width: 40%;*/
+    box-shadow: none!important;
+}
+
+i[id^=dashboard] {
+    cursor: pointer;
+}
+
+#add-dashboard-text {
+    padding: 20px;
+}
+
+@media only screen and (min-width: 1024px) {
+    .divisor {
+        display: none;
+    }
+}
+@media only screen and (max-width: 1024px) {
+    .center-side {
+        display: none;
+    }
+    .left-side,
+    .right-side {
+        width: 100%;
+        float: none;
+        display: inline-block;
+    }
+    .add-dashboard-select {
+        width: 49%;
+        margin-right: 2%;
+    }
+    .add-dashboard-button {
+        width: 49%;
+    }
+    .add-dashboard-text {
+        width: 100%;
+    }
+}
+
+#first-step label {
+    margin-top: 15px;
+}
+
+@media only screen and (max-width: 768px) {
+    .m-auto-mobile {
+        margin: 0 auto;
+    }
+    .m-auto-mobile div {
+        margin-bottom: 10px;
+    }
+    #user-profile-submit-container {
+        float: none!important;
+        margin-left: 0px!important;
+        width: 100%!important;
+    }
+}
+
+.dashboard-circle {
+    border-radius: 50%;
+    margin: 5px auto;
+    height: 200px;
+    border: 2px solid #395987;
+    width: 200px;
+    padding: 63px 0px;
+    text-align: center;
+    box-shadow: 0px 0px 10px #000;
+    -webkit-box-shadow: 0px 0px 10px #000;
+    -moz-box-shadow: 0px 0px 10px #000;
+    -o-box-shadow: 0px 0px 10px #000;
+}
+
+.trash-icon {
+    font-size: 22px;
+    margin-top: 8px;
+}

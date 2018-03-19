@@ -1,0 +1,297 @@
+span.delete-icon {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+span.delete-icon span {
+    position: absolute;
+    display: block;
+    top: 0.7em;
+    right: 0.7em;
+    width: 1.6em;
+    height: 1.6em;
+    background: url('../img/close.svg');
+    background-position: center center;
+    background-size: 1.6em 1.6em;
+    cursor: pointer;
+}
+
+span.delete-icon input {
+    padding-right: 3em;
+    box-sizing: border-box;
+}
+
+#comment {
+  min-height: 6.4em;
+}
+
+#result-box {
+  display: none;
+  max-height: 18.75em;
+  overflow: auto;
+  margin-top: -3px;
+  border: 1px solid #bbb;
+  border-top: 0;
+}
+
+#result-box .result-row {
+  border-bottom: 1px dashed;
+  min-height: 2em;
+  padding: 0.2em 1em;
+}
+
+.no-results, .error-result {
+  min-height: 2em;
+  padding: 1em;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#message-box .message-success, #message-box .message-error {
+  padding: 1em;
+  margin: 0 auto;
+  text-align: center;
+  font-weight: 600;
+  height: 4.37em;
+}
+
+#message-box .message-error, .error-result {
+  color: #ff0000;
+  font-weight: 600;
+}
+
+#result-box .result-row:last-child {
+  border-bottom: 0;
+}
+
+#result-box .result-row a {
+  line-height: 1.8em;
+}
+
+#ratings-form form {
+  padding: 1.25em;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+}
+
+#ratings-form label {
+  margin-top: 3px;
+}
+
+#ratings-form label, #ratings-form input, #ratings-form button {
+  margin-bottom: 3px;
+  display: block;
+}
+
+#ratings-form button {
+  line-height: 30px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+#ratings-form .error {
+  color: #ff0000;
+}
+
+@keyframes spinner {
+  to {transform: rotate(360deg);}
+}
+
+#message-box {
+  display: none;
+  padding-top: 0.63em;
+  text-align: center;
+}
+
+#message-box ul {
+  margin: 0;
+  text-align: left;
+  color: #ff0000;
+  font-weight: 600;
+  margin-left: 1.5em;
+}
+
+#message-box.spinner, #result-box.spinner, .scroll-load.spinner {
+  height: 5em;
+}
+
+/*#message-box {
+  min-height: 5em;
+}*/
+
+.spinner {
+  position: relative;
+}
+ 
+.spinner:before {
+  content: '';
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 30px;
+  height: 30px;
+  margin-top: -15px;
+  margin-left: -15px;
+  border-radius: 50%;
+  border: 3px solid #ccc;
+  border-top-color: #000;
+  animation: spinner .5s linear infinite;
+}
+
+#ratings-form .stars {
+  background: url("../img/stars.png") repeat-x 0 0;
+  width: 150px;
+  margin: 0 0 3px;
+}
+
+#ratings-form .stars input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+
+#ratings-form .stars input[type="radio"].star-5:checked ~ span {
+  width: 100%;
+}
+
+#ratings-form .stars input[type="radio"].star-4:checked ~ span {
+  width: 80%;
+}
+
+#ratings-form .stars input[type="radio"].star-3:checked ~ span {
+  width: 60%;
+}
+
+#ratings-form .stars input[type="radio"].star-2:checked ~ span {
+  width: 40%;
+}
+
+#ratings-form .stars input[type="radio"].star-1:checked ~ span {
+  width: 20%;
+}
+
+#ratings-form .stars label {
+  display: block;
+  width: 30px;
+  height: 30px;
+  margin: 0!important;
+  padding: 0!important;
+  text-indent: -999em;
+  float: left;
+  position: relative;
+  z-index: 10;
+  background: transparent!important;
+  cursor: pointer;
+}
+
+#ratings-form .stars label:hover ~ span {
+  background-position: 0 -30px;
+}
+
+#ratings-form .stars label.star-5:hover ~ span {
+  width: 100% !important;
+}
+
+#ratings-form .stars label.star-4:hover ~ span {
+  width: 80% !important;
+}
+
+#ratings-form .stars label.star-3:hover ~ span {
+  width: 60% !important;
+}
+
+#ratings-form .stars label.star-2:hover ~ span {
+  width: 40% !important;
+}
+
+#ratings-form .stars label.star-1:hover ~ span {
+  width: 20% !important;
+}
+
+#ratings-form .stars span {
+  display: block;
+  width: 0;
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 30px;
+  background: url("../img/stars.png") repeat-x 0 -60px;
+  -webkit-transition: -webkit-width 0.1s;
+  -moz-transition: -moz-width 0.1s;
+  -ms-transition: -ms-width 0.1s;
+  -o-transition: -o-width 0.1s;
+  transition: width 0.1s;
+}
+
+#ratings-form-submit {
+  width: 49%;
+  float: right;
+}
+
+#ratings-form-reset {
+  width: 49%;
+  float: left;
+}
+
+
+#last-comments {
+  margin-top: 1.5em;
+  min-height: 5em;
+}
+
+.comment-row {
+  margin: 1em 0;
+  overflow: auto;
+  clear: both;
+  border-bottom: 1px dashed;
+}
+
+.comment-row h3, .comment-row p {
+  clear: none;
+}
+
+.comment-row .photo-thumb {
+  float: left;
+  width: 60px;
+  margin-right: 1.5em;
+  margin-bottom: 0.2em;
+}
+
+.comment-header {
+  width: 100%;
+}
+
+.comment-header .date-time-field {
+  font-size: 10px;
+  float: left;
+  line-height: 2em;
+}
+
+.comment-header .stars-field {
+  float: right;
+}
+
+.comment-header .clear {
+  clear: both;
+}
+
+.stars-field .grey-star {
+  width: 30px;
+  height: 30px;
+  background: url("../img/stars.png") repeat-x 0 0px;
+  float: left;
+}
+
+.stars-field .gold-star {
+  width: 30px;
+  height: 30px;
+  background: url("../img/stars.png") repeat-x 0 -60px;
+  float: left;
+}
+
+.g-recaptcha {
+  margin: 0.5em 0 0;
+}

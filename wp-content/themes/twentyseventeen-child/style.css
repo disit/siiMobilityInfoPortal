@@ -1,0 +1,428 @@
+/*
+ Theme Name:   Twenty Seventeen Child
+ Description:  Twenty Seventeen Child Theme
+ Author:       Daniele Pasqui
+ Template:     twentyseventeen
+ Version:      1.0.0
+ Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
+ Text Domain:  twenty-seventeen-child
+*/
+
+button,
+button:hover,
+button:active,
+button:focus {
+    background-color: #395987;
+    outline: none!important;
+    border-radius: 10px;
+}
+button:hover,
+button:active,
+button:focus {
+    opacity: 0.8;
+}
+
+.container-loghi {
+    margin: 0;
+    background: #fff;
+    width: 100%;
+    padding: 10px 5% 10px 7%;
+}
+#logo-disit {
+    width: 20%;
+    margin-left: 20px;
+    min-width: 120px;
+}
+#logo-miur {
+    width: 15%;
+    min-width: 120px;
+}
+
+@media screen and (max-width: 767px) {
+    #logo-miur {
+        width: 26%;
+    }    
+    #logo-disit {
+        width: 35%;
+    }
+}
+.wrap{
+    max-width: 90%!important;
+}
+#primary {
+    max-width: none!important;
+}
+
+a.discover-more:hover {
+    color: #fff;
+    text-decoration: none;
+    opacity: 0.8;
+    box-shadow: none;
+}
+
+a.discover-more {
+    background-color: #395987;
+    outline: none!important;
+    text-decoration: none;
+    border: 0;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    font-size: 0.875rem;
+    font-weight: 800;
+    line-height: 1;
+    padding: 1em 2em;
+    text-shadow: none;
+    -webkit-transition: background 0.2s;
+    transition: background 0.2s;
+}
+div.user-logged-in-profile {
+    display: block;
+    position: absolute;
+    top: 25px;
+    right: 0;
+    font-size: 0.875rem;
+}
+
+div.user-logged-in-profile:hover {
+    cursor: pointer;
+}
+
+div.profile-menu {
+    position: absolute;
+    background: #272C31;
+    color: #ffffff;
+    width: 150px;
+    height: 68px;
+    right: 13px;
+    padding: 13px;
+    top: 29px;
+    z-index: 1000;
+    display: none;
+}
+
+div.profile-menu i {
+    font-size: 30px;
+}
+
+div.profile-menu li {
+    margin-bottom: 5px;
+    border: none;
+}
+
+div.profile-menu ul {
+    display: contents!important;
+}
+
+div.profile-menu a {
+    color: #fff;
+    padding: 0;
+}
+
+.w-50 {
+    width: 50%;
+    float: left;
+}
+
+.w-75 {
+    float: left;
+    padding: 5px;
+}
+
+.w-25 {
+    float: left;
+}
+
+img.android-img {
+    width: 150px;
+}
+
+img.ios-img {
+    width: 45px;
+}
+
+a.store-link,
+a.store-link:hover,
+div.store-link-container {
+    box-shadow: none!important;
+    text-align: center;
+    margin: 0 auto;
+}
+
+#first-section {
+    margin-bottom: 100px;
+}
+
+#second-section {
+    background-image: url(img/road.png);
+    background-repeat: no-repeat;
+    background-position: left top;
+    width: 100%;
+    height: 850px;  
+}
+
+.second-section-info {
+    padding-top: 330px;
+    margin-left: 14%;
+}
+
+
+@media screen and (max-width: 1600px) {
+    #second-section {
+        background-position: -225px top;
+    }
+    .container-loghi {
+        padding: 10px 5% 10px 8%;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    #second-section {
+        background-position: -350px top;
+    }
+    .container-loghi {
+        padding: 10px 5% 10px 9%;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    #second-section {
+        background-position: -500px 20px;
+    }
+    .container-loghi {
+        padding: 10px 5% 10px 10%;
+    }
+    div.bar-pilota img {
+        min-width: 50px!important;
+    }
+    div.bar-pilota b {
+        font-size: 14px;
+    }
+    #logo-miur,
+    #logo-disit {
+        min-width: 100px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #second-section {
+        background-position: -650px 20px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    #second-section {
+        background-position: -650px 70px;
+    }
+    div.bar-pilota img,
+    #logo-miur,
+    #logo-disit {
+        min-width: auto;
+    }
+}
+
+#third-section {
+    margin-top: 100px;
+}
+
+div.container-loghi.fixed {
+    position: fixed;
+    top: 61px;
+    width: 100%;
+    z-index: 1000;
+}
+
+div.bar-pilota {
+    background: #ffffff;
+}
+div.bar-pilota > div {
+    margin-left: auto;
+}
+
+div.bar-pilota img {
+    width: 10%;
+    margin-right: 10px;
+    min-width: 55px;
+}
+
+div.bar-pilota div.bar-text {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 10px;
+}
+
+div.info-table {
+    width: 50%;
+    margin-left: 35%;
+    padding-top: 30px;
+}
+div.info-table i {
+    font-size: 30px;
+}
+
+.info-table div.w-75,
+.info-table div.w-25 {
+    border-bottom: 2px solid #4BB543;
+    margin-bottom: 15px;
+}
+
+.info-table div.w-75.orange,
+.info-table div.w-25.orange {
+    border-bottom: 2px solid #c79601;
+}
+
+div.info-table .custom-icon {
+    text-align: center;
+    padding: 7px 0px;
+}
+.custom-icon i{
+    color: #4BB543;
+}
+.custom-icon i.orange-color{
+    color: #c79601;
+}
+div.info-table div {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+@media screen and (max-width: 767px) {
+    div.user-logged-in-profile {
+        top: 14px;
+    }
+    label.hidden-xs {
+        display: none;
+    }
+    div.info-table {
+        width: 75%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    div.bar-pilota img {
+        width: 20%;
+    }
+    div.container-loghi.fixed { 
+        top: 0;
+        margin-top: 0px;
+    }
+    div.container-loghi {
+        padding: 10px 5% 10px 5%;
+    }
+    img.android-img,
+    img.ios-img {
+        margin-top: 45px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    div.info-table {
+        width: 100%;
+    } 
+    div.bar-pilota img {
+        width: 20%;
+    }
+    div.bar-pilota a {
+        line-height: 10px;
+    }
+    div.bar-pilota b {
+        font-size: 10px;
+    }
+}
+
+button.city-modal-button {
+    background: transparent;
+    color: #000;
+    outline: none!important;
+    width: 200px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4em;
+    border-color: #395987!important;
+    border-width: 2px!important;
+    border-radius: 5%;
+    margin: 1%;
+}
+button.city-modal-button:hover {
+    color: #fff;
+    background: #395987;
+}
+button.city-modal-button:hover i {
+    color: #fff;
+}
+
+button.city-modal-button i {
+    color: #395987;
+}
+
+.custom-modal {
+    background: white;
+    border-radius: 5px;
+    margin-top: 40px;
+    padding: 25px;
+}
+
+.custom-modal ul {
+    text-align: center;
+    list-style-type: none;
+}
+
+.custom-modal a,
+.custom-modal a:hover {
+    box-shadow: none;
+}
+
+.custom-modal .list-container {
+    border-bottom: 2px solid #000;
+    margin: 0 20px;
+}
+
+.custom-modal .modal-content {
+    border: none;
+}
+
+.custom-modal .modal-header {
+    padding: 0;
+    padding-bottom: 10px;
+}
+
+.custom-modal .modal-content button:hover {
+    background: none;
+}
+div.city-name {
+    font-size: 25px;
+    margin: 20px;
+    border-bottom: 2px solid #000;
+    border-top: 2px solid #000;
+    padding: 20px 0;
+}
+
+.bus-icon-container {
+    border-radius: 50%;
+    border: 1px solid #000;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 58px;
+    font-size: 30px;
+    margin: 20px auto 0px auto;
+}
+
+#download-app-store-text {
+    top: 0;
+}
+
+.label-point {
+    border: 2px #007bff solid;
+    border-radius: 60%;
+    padding: 10px;
+}

@@ -1,0 +1,49 @@
+@keyframes spinner {
+  to {transform: rotate(360deg);}
+}
+
+.spinner {
+  position: relative;
+  height: 40px;
+}
+ 
+.spinner:before {
+  content: '';
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 30px;
+  height: 30px;
+  margin-top: -15px;
+  margin-left: -15px;
+  border-radius: 50%;
+  border: 3px solid #ccc;
+  border-top-color: #000;
+  animation: spinner .5s linear infinite;
+}
+
+#user-message-box ul {
+  margin-top: 10px;
+  color: #ff0000;
+}
+#user-message-box-success ul {
+  margin-top: 10px;
+  color: #4BB543;
+}
+#user-message-box-success ul,
+#user-message-box ul{
+    margin: 0;
+    text-align: left;
+    font-weight: 600;
+    margin-left: 1.5em;
+}
+
+#username,
+#email,
+#password,
+#password_confirm,
+#name,
+#surname {
+  margin-bottom: 10px;
+}
