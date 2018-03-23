@@ -48,7 +48,9 @@ function get_dashboards()
 {
     return get_posts(array(
         'post_type' => SIIMOB_DASHBOARD_POST_TYPE_NAME,
-        'numberposts' => -1
+        'numberposts' => -1,
+        'orderby' => 'title',
+        'order' => 'ASC',
     ));
 }
 
@@ -86,6 +88,7 @@ function build_dashboard_column_meta_box($oPost)
             <p>
                 <input type="text" name="<?php echo SIIMOB_DASHBOARD_COLUMN_META_FIELD_NAME; ?>" value="<?php echo $sColumn; ?>" /> 
             </p>
+            <p>Inserire un valore da 1 a 12</p>
         </div>
     <?php
 }
@@ -98,6 +101,7 @@ function build_dashboard_height_meta_box($oPost)
             <p>
                 <input type="text" name="<?php echo SIIMOB_DASHBOARD_HEIGHT_META_FIELD_NAME; ?>" value="<?php echo $iHeight; ?>" /> 
             </p>
+            <p>Inserire l'altezza della dashboard, default 500px (Non inserire px, solo il valore numerico)</p>
         </div>
     <?php
 }
