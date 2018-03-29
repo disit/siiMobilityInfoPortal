@@ -152,10 +152,13 @@ function build_custom_dashboard_generic_page()
     }
     $aDashboards = get_posts($aArgs);
     $sUrl = get_post_meta($aDashboards[0], SIIMOB_DASHBOARD_URL_META_FIELD_NAME, true);
+    $iHeight = get_post_meta($aDashboards[0], SIIMOB_DASHBOARD_HEIGHT_META_FIELD_NAME, true);
+    $sHeight = empty($iHeight) ? '500px' : $iHeight . 'px';
+
     ?>
         <div class="row">
             <div class="item col-md-12">
-                <iframe style="width: 100%; height: 800px" src="<?php echo $sUrl;?>" onload="resizeIframe(this)"></iframe>
+                <iframe style="width: 100%; height: <?php echo $sHeight; ?>;" src="<?php echo $sUrl;?>" onload="resizeIframe(this)"></iframe>
             </div>
         </div>
     <?php
