@@ -1,0 +1,18 @@
+body.totem-page {
+    height: 1080px;
+    width: 1920px;
+    position: relative;
+}
+footer.totem-footer {
+    height: 45px;
+    background-color: #395987;
+    bottom: 0;
+    width: 100%;
+    position: absolute;
+}
+div.totem-content {
+    margin-top: 16px;
+    padding: 0 38px;
+    height: 780px;
+    width: 100%;
+}
