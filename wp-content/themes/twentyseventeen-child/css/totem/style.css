@@ -192,6 +192,7 @@ body.totem-page .qmn_quiz_container .qmn_btn, .qmn_quiz_container .btn {
     padding: 25px 70px !important;
     border-radius: 10px;
     outline: none;
+    border: none;
 }
 
 body.totem-page .qmn_quiz_container:focus .qmn_btn:focus, .qmn_quiz_container:focus .btn:focus,
