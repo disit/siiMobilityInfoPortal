@@ -28,8 +28,8 @@ function siimob_dashboard_enqueue()
     );
 
     wp_enqueue_script(
-        'custom',
-        'js/custom.js',
+        'iframe',
+        get_stylesheet_directory_uri() . '/js/iframe.js',
         'jquery',
         null,
         true

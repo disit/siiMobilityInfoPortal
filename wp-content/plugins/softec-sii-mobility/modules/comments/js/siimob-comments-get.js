@@ -1,18 +1,18 @@
 jQuery.noConflict()(function($) {
   "use strict";
   $(document).ready(function() {
-    var postsOffset = 20;
+    var postsOffset = 5;
     var isProcessing = false;
 
     /*
-     * Prende gli ultimi 20 commenti inseriti con una chiamata AJAX a Wordpress
+     * Prende gli ultimi 5 commenti inseriti con una chiamata AJAX a Wordpress
      * Reimposta postsOffset e isProcessing nel caso l'utente avesse effttuato uno scroll
-     * sulla pagina ed avesse visto più di 20 commenti
+     * sulla pagina ed avesse visto più di 5 commenti
      */
     siimobComments.getLastComments = function() {
       var commentResultRow = "";
 
-      postsOffset = 20;
+      postsOffset = 5;
       isProcessing = false;
 
       $.ajax({
@@ -80,7 +80,7 @@ jQuery.noConflict()(function($) {
     /*
      * Calcola l'altezza della pagina in cui si trova l'utente
      * Se l'utente si trova all'80% dello scroll della pagina, effettua una chiamata AJAX a Wordpress
-     * per visualizzare altri 20 commenti e li inserisce successivamente a quelli già visualizzati
+     * per visualizzare altri 5 commenti e li inserisce successivamente a quelli già visualizzati
      */
     $(document).scroll(function() {
       var scrollAmount = $(window).scrollTop();
@@ -89,7 +89,7 @@ jQuery.noConflict()(function($) {
 
       if(scrollPercent > 80 && !isProcessing) {
         /*
-         * isProcessing è la variabile che indica che è in corso la chiamata AJAX per richiamare altri 20 commenti
+         * isProcessing è la variabile che indica che è in corso la chiamata AJAX per richiamare altri 5 commenti
          * da Wordpress e viene reimpostata a false quando la chiamata va buon fine ed esistono altri commenti da
          * visualizzare. La variabile rimane impostata a true se non esistono altri commenti da visualizzare e viene
          * reinizializzata a false quando viene chiamata la funzione getLastComments()
@@ -137,7 +137,7 @@ jQuery.noConflict()(function($) {
 
                 scrolledCommentRow += "<div class='comment-row'>" +
                                           "<h3>" + commentRowServiceName + " - " + commentRowCivic + " - " + commentRowTypeLabel + "</h3>" +
-                                          "<img src='" + imgSrc + "' class='photo-thumb' alt='" + commentRowServiceName + "' />" +
+                                          /*"<img src='" + imgSrc + "' class='photo-thumb' alt='" + commentRowServiceName + "' />" +*/
                                           "<div class='comment-header'>" +
                                             "<div class='date-time-field'>" + commentRowTimestamp + "</div>" +
                                             "<div class='stars-field'>" + imgStars + "</div>" +
@@ -148,7 +148,7 @@ jQuery.noConflict()(function($) {
               });
 
               // Incrementa l'offset per la prossima chiamata AJAX e reimposta isProcessing a false
-              postsOffset += 20;
+              postsOffset += 5;
               isProcessing = false;
             }
           },
@@ -164,7 +164,7 @@ jQuery.noConflict()(function($) {
       }
     });
 
-    // Richiama gli ultimi 20 commenti inseriti una volta che la pagina è stata caricata
+    // Richiama gli ultimi 5 commenti inseriti una volta che la pagina è stata caricata
     siimobComments.getLastComments();
   });
 });

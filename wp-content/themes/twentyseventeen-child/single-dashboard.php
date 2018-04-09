@@ -11,9 +11,8 @@
 </div>
 <div id="dashboard-<?php echo the_ID();?>">
     <div class="col-md-12">
-        <iframe style="width: 100%; height: <?php echo $sHeight; ?>;" src="<?php echo $sUrl;?>"></iframe>
+        <iframe data-height="<?php echo $iHeight?>" style="width: 100%; margin: 0 auto; display: flex; max-width: 1560px; height: <?php echo $sHeight; ?>;" src="<?php echo $sUrl;?>"></iframe>
     </div>
 </div>
-
 
 <?php get_footer(); ?>
