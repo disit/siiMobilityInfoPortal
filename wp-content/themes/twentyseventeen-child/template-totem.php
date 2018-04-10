@@ -1,44 +1,24 @@
 <?php
-/* Template Name: Pagine Template Totem */
-
-
-?><!DOCTYPE html>
+	/* Template Name: Pagine Template Totem */
+?>
+<!DOCTYPE html>
 <html <?php language_attributes(); ?> class="no-js no-svg">
-<head>
-<meta charset="<?php bloginfo( 'charset' ); ?>">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="profile" href="http://gmpg.org/xfn/11">
+	<?php get_template_part( 'template-parts/totem/head' ); ?>
 
-<?php wp_head(); ?>
-</head>
+	<body class="totem-page">
 
-
-<body <?php body_class(); ?>>
-<div id="page" class="site">
-
-	<div class="site-content-contain">
-		<div id="content" class="site-content">
-
-			<div class="wrap">
-				<div id="primary" class="content-area">
-					<main id="main" class="site-main" role="main">
-
-						<?php
-						while ( have_posts() ) : the_post();
-
-							get_template_part( 'template-parts/page/content', 'page' );
-
-						endwhile; // End of the loop.
-						?>
-
-					</main><!-- #main -->
-				</div><!-- #primary -->
-			</div><!-- .wrap -->
-
+		<?php get_template_part( 'template-parts/totem/header' ); ?>
+		<div class="totem-main-content">
+			<div class="totem-content">
+				<?php if (have_posts()) : ?>
+					<?php while (have_posts()) : the_post(); ?>
+						<?php the_content(); ?>
+					<?php endwhile; ?>
+				<?php endif; ?>
+			</div>
+			<?php get_template_part( 'template-parts/totem/back-home' ); ?>
 		</div>
-	</div><!-- .site-content-contain -->
-</div><!-- #page -->
-<?php wp_footer(); ?>
+		<?php get_template_part( 'template-parts/totem/footer' ); ?>
 
-</body>
+	</body>
 </html>
