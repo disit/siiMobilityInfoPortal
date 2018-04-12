@@ -185,7 +185,7 @@ function add_cron_recurrence_interval( $schedules ) {
  */
 function siimob_comments_activation() {
     // Aggiunge gli user meta agli utenti esistenti
-    siimob_comment_users_meta( 'add' );
+    // siimob_comment_users_meta( 'add' );
 
     // Schedula ogni 5 minuti l'upload ed il download dei commenti da Sii-Mobility
     wp_schedule_event( time(), 'every_five_minutes', 'siimob_comments_refresh' );
@@ -220,7 +220,7 @@ function siimob_comments_deactivation() {
     unregister_post_type( SIIMOB_COMMENT__POST_TYPE_NAME );
 
     // Rimuove gli user_meta con l'uid di Sii-Mobility hardcodati
-    siimob_comment_users_meta( 'remove' );
+    // siimob_comment_users_meta( 'remove' );
 
     // Rimuove dal Cron lo schedule di download e upload commenti da Sii-Mobility
     wp_clear_scheduled_hook( 'siimob_comments_refresh' );
@@ -242,7 +242,8 @@ function siimob_comments_download_upload() {
  * Crea un post con post_type == siimob_comment con i dati inviati tramite AJAX
  */
 function siimob_comment_post() {
-    $current_user   = wp_get_current_user();
+    // Eliminato il campo utente, i commenti saranno aperti a tutti gli utenti che accedono al portale
+    // $current_user   = wp_get_current_user();
     $error_counter  = 0;
     $json_response  = array();
 
@@ -270,7 +271,7 @@ function siimob_comment_post() {
     ( $captcha_result->success ) ?: $error_counter++;
 
     $timestamp    = current_time( 'mysql' );
-    $uid          = get_user_meta( $current_user->ID, SIIMOB_COMMENT__USERMETA_UID, true );
+    // $uid          = get_user_meta( $current_user->ID, SIIMOB_COMMENT__USERMETA_UID, true );
 
     if ( $error_counter == 0 ) {
         // Se tutti i valori sono corretti, salva il post
@@ -290,7 +291,7 @@ function siimob_comment_post() {
                 SIIMOB_COMMENT__POSTMETA_TYPE_LABEL     => $type_label,
                 SIIMOB_COMMENT__POSTMETA_RATING         => $stars,
                 SIIMOB_COMMENT__POSTMETA_TIMESTAMP      => $timestamp,
-                SIIMOB_COMMENT__POSTMETA_UID            => $uid,
+                // SIIMOB_COMMENT__POSTMETA_UID            => $uid,
                 SIIMOB_COMMENT__POSTMETA_UPLOADED       => 0,
             ),
         ));
@@ -356,44 +357,40 @@ function siimob_comments_get() {
  * Visualizza il frontend richiamato dal shortcode [siimob-comments]
  */
 function siimob_comments_show_frontend() {
-    if ( is_user_logged_in() ) {
-        echo '<h2>Invia commento</h2>
-        <form name="ratings-form" id="ratings-form">
+    echo '<h2>Invia commento</h2>
+    <form name="ratings-form" id="ratings-form">
 
-        <label for="service-name">Punto di Interesse</label>
-        <input name="service-name" id="service-name" type="text" placeholder="Nome o indirizzo" />
-        <input name="service-data" id="service-data" type="hidden" />
-        <div id="result-box"></div>
+    <label for="service-name">Punto di Interesse</label>
+    <input name="service-name" id="service-name" type="text" placeholder="Nome o indirizzo" />
+    <input name="service-data" id="service-data" type="hidden" />
+    <div id="result-box"></div>
 
-        <label for="star-5">Valutazione</label>
-            <div class="stars">
-                <input type="radio" name="star" class="star-1" id="star-1" value="1" />
-                <label class="star-1" for="star-1">1</label>
-                <input type="radio" name="star" class="star-2" id="star-2" value="2" />
-                <label class="star-2" for="star-2">2</label>
-                <input type="radio" name="star" class="star-3" id="star-3" value="3" />
-                <label class="star-3" for="star-3">3</label>
-                <input type="radio" name="star" class="star-4" id="star-4" value="4" />
-                <label class="star-4" for="star-4">4</label>
-                <input type="radio" name="star" class="star-5" id="star-5" value="5" />
-                <label class="star-5" for="star-5">5</label>
-                <span></span>
-            </div>
+    <label for="star-5">Valutazione</label>
+        <div class="stars">
+            <input type="radio" name="star" class="star-1" id="star-1" value="1" />
+            <label class="star-1" for="star-1">1</label>
+            <input type="radio" name="star" class="star-2" id="star-2" value="2" />
+            <label class="star-2" for="star-2">2</label>
+            <input type="radio" name="star" class="star-3" id="star-3" value="3" />
+            <label class="star-3" for="star-3">3</label>
+            <input type="radio" name="star" class="star-4" id="star-4" value="4" />
+            <label class="star-4" for="star-4">4</label>
+            <input type="radio" name="star" class="star-5" id="star-5" value="5" />
+            <label class="star-5" for="star-5">5</label>
+            <span></span>
+        </div>
 
-        <label for="comment">Commento</label>
-        <textarea name="comment" id="comment" placeholder="Commento"></textarea>
+    <label for="comment">Commento</label>
+    <textarea name="comment" id="comment" placeholder="Commento"></textarea>
 
-        <div class="g-recaptcha" data-size="normal" data-sitekey="' . get_option(GOOGLE_RECAPTCHA_SITE_KEY) . '"></div>
+    <div class="g-recaptcha" data-size="normal" data-sitekey="' . get_option(GOOGLE_RECAPTCHA_SITE_KEY) . '"></div>
 
-        <div id="message-box"></div>
+    <div id="message-box"></div>
 
-        <button type="submit" id="ratings-form-submit">Invia</button>
-        <button type="reset" id="ratings-form-reset">Ripristina</button>
+    <button type="submit" id="ratings-form-submit">Invia</button>
+    <button type="reset" id="ratings-form-reset">Ripristina</button>
 
-        </form>';
-    } else {
-        echo "<div class='no-results'>Registrati e accedi per lasciare un commento</div>";
-    }
+    </form>';
 
     echo '<h2>Ultimi commenti inseriti</h2>
     <div id="last-comments"></div>';
@@ -410,7 +407,7 @@ function siimob_comments_show_frontend() {
         true
     );
 
-    if ( is_user_logged_in() ) {
+    /*if ( is_user_logged_in() ) {
         wp_enqueue_script(
             'siimob-comments-post',
             plugin_dir_url( __FILE__ ) . 'js/siimob-comments-post.js',
@@ -418,7 +415,14 @@ function siimob_comments_show_frontend() {
             null,
             true
         );
-    }
+    }*/
+    wp_enqueue_script(
+        'siimob-comments-post',
+        plugin_dir_url( __FILE__ ) . 'js/siimob-comments-post.js',
+        'jquery',
+        null,
+        true
+    );
 
     wp_localize_script(
         'siimob-comments-js',

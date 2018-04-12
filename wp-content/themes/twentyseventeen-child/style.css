@@ -49,15 +49,19 @@ button:focus {
 .wrap{
     max-width: 90%!important;
 }
+.no-padding-top {
+    padding-top: 0px;
+}
 #primary {
     max-width: none!important;
 }
 
-a.discover-more:hover {
+a.discover-more:hover,
+a.discover-more:focus {
     color: #fff;
     text-decoration: none;
     opacity: 0.8;
-    box-shadow: none;
+    box-shadow: none!important;
 }
 
 a.discover-more {
@@ -66,20 +70,21 @@ a.discover-more {
     text-decoration: none;
     border: 0;
     -webkit-border-radius: 2px;
-    border-radius: 2px;
+    border-radius: 10px;
     -webkit-box-shadow: none;
     box-shadow: none;
     color: #fff;
     cursor: pointer;
     display: inline-block;
-    font-size: 14px;
-    font-size: 0.875rem;
+    font-size: 18px;
     font-weight: 800;
     line-height: 1;
     padding: 1em 2em;
     text-shadow: none;
     -webkit-transition: background 0.2s;
     transition: background 0.2s;
+    padding: 20px 70px; 
+    margin-top: 20px;
 }
 div.user-logged-in-profile {
     display: block;
@@ -138,8 +143,11 @@ div.profile-menu a {
     float: left;
 }
 
+img.android-img:hover {
+    opacity: 0.5;
+}
 img.android-img {
-    width: 150px;
+    width: 200px;
 }
 
 img.ios-img {
@@ -152,50 +160,32 @@ div.store-link-container {
     box-shadow: none!important;
     text-align: center;
     margin: 0 auto;
-    margin-top: 20px;
+    margin-top: 50px;
 }
 
-#first-section,
-#third-section {
+#first-section {
     margin-bottom: 100px;
 }
 
-#second-section {
-    background-image: url(img/pilota/road.png);
-    background-repeat: no-repeat;
-    background-position: left top;
-    width: 100%;
-    height: 850px;  
-}
-
-.second-section-info {
-    padding-top: 330px;
-    margin-left: 14%;
+#first-section #page-title h1 {
+    color: #F73059;
+    font-size: 60px;
 }
 
 
 @media screen and (max-width: 1600px) {
-    #second-section {
-        background-position: -225px top;
-    }
     .container-loghi {
         padding: 10px 5% 10px 8%;
     }
 }
 
 @media screen and (max-width: 1200px) {
-    #second-section {
-        background-position: -350px top;
-    }
     .container-loghi {
         padding: 10px 5% 10px 9%;
     }
 }
 
 @media screen and (max-width: 991px) {
-    #second-section {
-        background-position: -500px 20px;
-    }
     .container-loghi {
         padding: 10px 5% 10px 10%;
     }
@@ -211,25 +201,26 @@ div.store-link-container {
     }
 }
 
-@media screen and (max-width: 767px) {
-    #second-section {
-        background-position: -650px 20px;
-    }
-}
-
 @media screen and (max-width: 576px) {
-    #second-section {
-        background-position: -650px 70px;
-    }
     div.bar-pilota img,
     #logo-miur,
     #logo-disit {
         min-width: auto;
     }
+    #first-section #page-title h1 {
+        font-size: 35px;
+    }
 }
 
-#third-section {
-    margin-top: 150px;
+#second-section {
+    margin-top: 50px; 
+}
+#img-campagna:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}
+#img-campagna {
+    width: 80%;
 }
 
 div.container-loghi.fixed {
@@ -257,42 +248,6 @@ div.bar-pilota div.bar-text {
     justify-content: center;
     flex-direction: column;
     padding-top: 10px;
-}
-
-div.info-table {
-    width: 50%;
-    margin-left: 35%;
-    padding-top: 30px;
-}
-div.info-table i {
-    font-size: 30px;
-}
-
-.info-table div.w-75,
-.info-table div.w-25 {
-    border-bottom: 2px solid #4BB543;
-    margin-bottom: 15px;
-}
-
-.info-table div.w-75.orange,
-.info-table div.w-25.orange {
-    border-bottom: 2px solid #c79601;
-}
-
-div.info-table .custom-icon {
-    text-align: center;
-    padding: 7px 0px;
-}
-.custom-icon i{
-    color: #4BB543;
-}
-.custom-icon i.orange-color{
-    color: #c79601;
-}
-div.info-table div {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
 }
 
 @media screen and (max-width: 767px) {
@@ -338,8 +293,8 @@ div.info-table div {
     }
 }
 
-button.city-modal-button {
-    background: transparent;
+/*button.city-modal-button {
+    background: #000;
     color: #000;
     outline: none!important;
     width: 200px;
@@ -365,8 +320,8 @@ button.city-modal-button:hover i {
 button.city-modal-button i {
     color: #395987;
 }
-
-.custom-modal {
+*/
+/*.custom-modal {
     background: white;
     border-radius: 5px;
     margin-top: 40px;
@@ -379,10 +334,18 @@ button.city-modal-button i {
 }
 
 .custom-modal a,
-.custom-modal a:hover {
+.custom-modal a *,
+.custom-modal a:hover,
+.custom-modal a:active,
+.custom-modal a:focus {
     box-shadow: none;
+    outline: none;
+    cursor: pointer;
+    color: #007bff;
 }
-
+.custom-modal a:hover label {
+    text-decoration: underline;
+} 
 .custom-modal .list-container {
     border-bottom: 2px solid #000;
     margin: 0 20px;
@@ -399,6 +362,52 @@ button.city-modal-button i {
 
 .custom-modal .modal-content button:hover {
     background: none;
+}*/
+.campaign-row {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display:         flex;
+    flex-wrap: wrap;
+}
+.campaign-row .col-lg-4 {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+.campaign-row .col-lg-4 ul {
+    text-align: center;
+    list-style-type: none;
+}
+.campaign-row .col-lg-4 .list-container {
+    margin: 0 20px;
+}
+.campaign-row .col-lg-4 button:hover {
+    background: none;
+}
+.campaign-row .col-lg-4 a,
+.campaign-row .col-lg-4 a *,
+.campaign-row .col-lg-4 a:hover,
+.campaign-row .col-lg-4 a:active,
+.campaign-row .col-lg-4 a:focus {
+    box-shadow: none;
+    outline: none;
+    cursor: pointer;
+    color: #007bff;
+}
+.campaign-row .col-lg-4 a {
+    border: none;
+}
+.campaign-row .col-lg-4 a:hover label {
+    text-decoration: underline;
+}
+.campaign-content {
+    border-bottom: 2px solid #000;
+}
+@media only screen and (min-width: 992px){
+    .campaign-content {
+        height: 630px;
+    }
 }
 div.city-name {
     font-size: 25px;
@@ -429,6 +438,7 @@ div.city-name {
     padding: 10px;
 }
 
+#fourth-section,
 #fourth-section .step-list {
     margin-top: 100px;
 }
@@ -440,6 +450,21 @@ div.city-name {
     margin-bottom: 10px;
 }
 
+.termini-policy a:hover {
+    opacity: 0.5;
+}
+
+.termini-policy a {
+    color: #000;
+    text-decoration: none!important;
+    box-shadow: none!important;
+}
+
+.termini-policy a:first-child {
+    padding-right: 20px;
+    margin-right: 20px;
+    border-right: 2px solid #000;
+}
 
 /*IMMAGINE MODALE*/
 #first-img,
@@ -523,3 +548,56 @@ div.city-name {
     }
 }
 /*IMMAGINE MODALE*/
+
+.project-box {
+    padding: 20px 50px;
+    display: flex;
+    flex-direction: column;
+    height: 350px;
+    position: relative;
+}
+
+.project-box img {
+    width: 50px;
+    margin-right: 25px;
+}
+.project-box b {
+    display: flex;
+    align-items: center;
+}
+
+@media only screen and (max-width: 1300px){ 
+    .project-box {
+        height: 550px;
+    }
+}
+@media only screen and (max-width: 992px){
+    .project-box {
+        height: 350px;
+    }
+}
+@media only screen and (max-width: 767px){
+    .project-box {
+        height: 400px;
+    }
+    .project-box.big-box {
+        height: 550px;
+    }
+}
+@media only screen and (max-width: 576px){
+    .project-box {
+        height: 400px;
+        padding: 10px; 
+    }
+    .project-row {
+        margin: 0px -20px!important;
+    }
+}
+@media only screen and (max-width: 476px) {
+    .project-box.big-box {
+        height: 650px;
+    }
+}
+.project-box.blue-box {
+    background: #81B5CC;
+}

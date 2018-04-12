@@ -6,11 +6,13 @@
         <div id="content" class="site-main" role="main">
             <article id="post-<?php echo the_ID(); ?>" class="twentyseventeen-panel  post-<?php echo the_ID(); ?> page type-page status-publish hentry">
                 <div class="panel-content">
-                    <div class="wrap">
+                    <div class="wrap no-padding-top">
                         <div class="entry-content">
                             <?php get_template_part( 'template-parts/pilota/section', 'first'  ); ?>
-                            <?php get_template_part( 'template-parts/pilota/section', 'second' ); ?>
-                            <?php get_template_part( 'template-parts/pilota/section', 'third'  ); ?>
+                            <hr/>
+                            <?php get_template_part( 'template-parts/pilota/section', 'second'  ); ?>
+                            <?php get_template_part( 'template-parts/pilota/section', 'campaign' ); ?>
+                            <hr/>
                             <?php get_template_part( 'template-parts/pilota/section', 'fourth' ); ?>
                         </div>
                     </div>

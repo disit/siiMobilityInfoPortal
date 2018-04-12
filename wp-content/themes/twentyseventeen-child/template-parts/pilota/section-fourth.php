@@ -1,12 +1,10 @@
 <section id="fourth-section">
-    <div class="font-weight-bold text-center">
-        <h2><?php echo get_post_meta(get_the_ID() ,'fourth-section-title', true); ?></h2>
+    <div class="text-center text-lg-left font-weight-bold">
+        <h2><?php echo get_post_meta(get_the_ID() ,'configurazione-telefono-title', true); ?></h2>
+        <label><?php echo get_post_meta(get_the_ID() ,'configurazione-telefono-sub-title', true); ?></label>
     </div>
-    <div class="step-list">
-        <?php echo get_post_meta(get_the_ID() ,'fourth-section-list', true); ?>
-    </div>
-    <div class="samsung-huawei-config text-center p-4">
-        <strong><?php echo get_post_meta(get_the_ID() ,'samsung-huawei-config', true); ?></strong>
+    <div class="text-center text-lg-left step-list font-weight-bold">
+        <?php echo get_post_meta(get_the_ID() ,'configurazione-telefono-list', true); ?>
     </div>
     <div class="row text-center">
         <div class="col-md-3">
@@ -22,6 +20,7 @@
             <img id="fourth-img" src="<?php echo get_stylesheet_directory_uri(); ?>/img/pilota/wizard-android-4.gif" />
         </div>
     </div>
+    <p class="text-center text-lg-right mt-5 termini-policy"><a class="mr-4" target="_blank" href="<?php echo get_stylesheet_directory_uri(); ?>/pdf/Termini_uso.pdf"><b>Termini e condizioni d'uso del servizio</b></a><a target="_blank" href="<?php echo get_stylesheet_directory_uri(); ?>/pdf/Privacy_Policy.pdf"><b>Privacy policy</b></a></p>
 </section>
 
 <!-- Immagine modale -->

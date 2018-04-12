@@ -6,7 +6,7 @@ function openModal(img)
 }
 
 jQuery(document).ready(function($) {
-    var imageModal = ['#first-img', '#second-img', '#third-img', '#fourth-img'];
+    var imageModal = ['#first-img', '#second-img', '#third-img', '#fourth-img', '#img-campagna'];
 
     imageModal.forEach(function(image) {
         $(image).click(function(){
