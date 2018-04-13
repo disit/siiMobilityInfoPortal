@@ -1,0 +1,42 @@
+.main-dashboard-text-top, .main-dashboard-text-bottom {
+    max-width: 1560px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.main-dashboard-text-top {
+    margin-bottom: 2rem;
+}
+
+#dashboard-switcher {
+    border: 1px solid #395987;
+    width: 22rem;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 0 0.8em;
+    margin: 1em;
+}
+
+.main-dashboard-text-bottom {
+    margin-top: 2rem;
+}
+
+.main-dashboard-text-bottom a,
+.main-dashboard-text-bottom a:link {
+    color: #007bff;
+    font-weight: bold;
+    box-shadow: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.main-dashboard-text-bottom a:hover {
+    color: #0155B3;
+    text-decoration: underline;
+    box-shadow: none;
+    outline: none;
+    cursor: pointer;
+}

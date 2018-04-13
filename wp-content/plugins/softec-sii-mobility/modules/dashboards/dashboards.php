@@ -117,7 +117,7 @@ function build_custom_dashboard_generic_page()
             )
         ),
         'post_type' => SIIMOB_DASHBOARD_POST_TYPE_NAME,
-        'numberposts' => 1,
+        'numberposts' => -1,
         'fields' => 'ids',
         'orderby' => 'date',
         'order' => 'ASC'
@@ -154,11 +154,47 @@ function build_custom_dashboard_generic_page()
     $sUrl = get_post_meta($aDashboards[0], SIIMOB_DASHBOARD_URL_META_FIELD_NAME, true);
     $iHeight = get_post_meta($aDashboards[0], SIIMOB_DASHBOARD_HEIGHT_META_FIELD_NAME, true);
     $sHeight = empty($iHeight) ? '500px' : $iHeight . 'px';
+
+    $optionValue = '';
+    foreach ($aDashboards as $value) {
+        $rowUrl = get_post_meta($value, SIIMOB_DASHBOARD_URL_META_FIELD_NAME, true);
+        $rowHeight = get_post_meta($value, SIIMOB_DASHBOARD_HEIGHT_META_FIELD_NAME, true);
+        $rowPostTerms = wp_get_post_terms($value, SIIMOB_PROVINCE_TAXONOMY_NAME);
+
+        $rowProvince = $rowPostTerms[0]->name;
+
+        $optionValue .= '<option value="' . $rowUrl . '" data-height="' . $rowHeight . '">' . $rowProvince . '</option>';
+    }
+
     ?>
         <div class="row">
             <div class="item col-md-12">
-                <iframe data-height="<?php echo $iHeight?>" style="width: 100%; margin: 0 auto; display: flex; max-width: 1560px; height: <?php echo $sHeight; ?>" src="<?php echo $sUrl;?>"></iframe>
+                <div class="main-dashboard-text-top">
+                        Seleziona la tua provincia di appartenenza
+                    <select id="dashboard-switcher">
+                        <?php echo $optionValue; ?>
+                    </select>
+                </div>
+
+                <iframe id="main-dashboard" data-height="<?php echo $iHeight?>" style="width: 100%; margin: 0 auto; display: flex; max-width: 1560px; height: <?php echo $sHeight; ?>" src="<?php echo $sUrl;?>"></iframe>
+
+                <div class="main-dashboard-text-bottom">
+                    Vuoi conoscere tutti i dati e i servizi sviluppati dal progetto Sii-Mobility? <a href="http://servicemap.disit.org/WebAppGrafo/mappa.jsp" target="_blank">Clicca qui!</a>
+                </div>
             </div>
         </div>
     <?php
+
+    wp_enqueue_script(
+        'siimob-dashboard-switcher-js',
+        plugin_dir_url( __FILE__ ) . 'js/siimob-dashboard-switcher.js',
+        'jquery',
+        null,
+        true
+    );
+
+    wp_enqueue_style(
+        'siimod-dashboards-css',
+        plugin_dir_url( __FILE__ ) . 'css/siimod-dashboards.css'
+    );
 }
