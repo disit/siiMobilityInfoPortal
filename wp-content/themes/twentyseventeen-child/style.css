@@ -215,7 +215,8 @@ div.store-link-container {
 #second-section {
     margin-top: 50px; 
 }
-#img-campagna:hover {
+#img-campagna:hover,
+#huawei-img:hover {
     opacity: 0.5;
     cursor: pointer;
 }
