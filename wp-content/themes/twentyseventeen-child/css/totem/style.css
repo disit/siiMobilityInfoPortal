@@ -103,29 +103,27 @@ body.totem-page .qmn_quiz_container .mlw_horizontal_choice {
 }
 body.totem-page .qmn_quiz_container .mlw_horizontal_choice input[type=radio]:checked+label {
     color: #fff;
-}
-body.totem-page .qmn_quiz_container .mlw_horizontal_choice input[type=radio]:checked {
     background: #395987;
 }
+
 body.totem-page .qmn_quiz_container .mlw_horizontal_choice input[type=radio] {
-    width: 450px;
-    -webkit-appearance: unset;
-    -moz-appearance: unset;
-    appearance: unset;
-    height: 150px;
-    outline: none!important;
-    border: 2px solid #395987;
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
 }
 body.totem-page .qmn_quiz_container .mlw_horizontal_choice label {
     font-weight: bold;
     font-size: 35px;
     color: #395987;
     margin: auto;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 0;
-    right: 0;
+    width: 450px;
+    height: 150px;
+    outline: none!important;
+    border: 2px solid #395987;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 body.totem-page .qmn_quiz_container div[class^="question-section-id-"],
 body.totem-page .qmn_quiz_container div[class*=" question-section-id-"] {
